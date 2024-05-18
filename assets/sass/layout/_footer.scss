@@ -1,0 +1,186 @@
+.footer {
+    background-color: #111827;
+    margin-top: 13.8rem;
+    padding-top: 16.6rem;
+    position: relative;
+    z-index: 2;
+
+    @include media-breakpoint-down(lg) {
+        margin-top: 6.8rem;
+        padding-top: 7.6rem;
+    }
+
+    &::after {
+        content: "";
+        background-image: url(../images/footer-mask.png);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        @include cover-background;
+        z-index: -1;
+    }
+
+    &_row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 6rem;
+
+        @include media-breakpoint-down(lg) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include media-breakpoint-down(md) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &_col {
+
+        h5 {
+            color: #FFFFFF;
+            font-weight: $TitilliumWeb-Regular;
+            font-size: 1.8rem;
+
+            @media (min-width:1600px) {
+                font-size: 2rem;
+            }
+
+        }
+
+        ul {
+            margin-top: 2.8rem;
+
+            li {
+                a {
+                    color: #D6E4FF;
+                    font-weight: $TitilliumWeb-Light;
+                    font-size: 1.8rem;
+                    position: relative;
+
+                    @media (min-width:1600px) {
+                        font-size: 2rem;
+                    }
+
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        transform: scaleX(0);
+                        border-radius: 5px;
+                        height: 2px;
+                        bottom: 0;
+                        left: 0;
+                        background: currentcolor;
+                        transform-origin: bottom right;
+                        transition: transform 0.25s ease-out;
+                    }
+
+                    &:hover::after {
+                        transform: scaleX(1);
+                        transform-origin: bottom left;
+                    }
+
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 2.8rem;
+
+                    @include media-breakpoint-down(md) {
+                        margin-bottom: 1.8rem;
+                    }
+                }
+            }
+        }
+    }
+
+    &_middle {
+        border-top: 1px solid #202e48;
+        border-bottom: 1px solid #202e48;
+        padding: 3rem 0;
+        margin-top: 7.4rem;
+    }
+
+    &_logo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        row-gap: 3rem;
+
+        @include media-breakpoint-down(xl) {
+            justify-content: center;
+        }
+
+        @include media-breakpoint-down(md) {
+            flex-direction: column;
+        }
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 9rem;
+            row-gap: 3rem;
+
+            @include media-breakpoint-down(lg) {
+                column-gap: 4rem;
+            }
+
+            @include media-breakpoint-down(md) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            li {
+                a {
+                    color: #FFFFFF;
+                    font-size: 1.8rem;
+                    font-weight: $TitilliumWeb-Regular;
+                    display: flex;
+                    column-gap: 1.5rem;
+
+                    @media (min-width:1600px) {
+                        font-size: 2rem;
+                    }
+
+                    @include media-breakpoint-down(sm) {
+                        font-size: 1.6rem;
+                    }
+                }
+
+                img {
+                    width: 2.5rem;
+                    height: 2.5rem;
+                }
+            }
+        }
+    }
+
+    &_copyright {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3rem 0;
+        flex-wrap: wrap;
+        row-gap: 3rem;
+
+        @include media-breakpoint-down(xl) {
+            justify-content: center;
+            text-align: center;
+            column-gap: 5rem;
+
+        }
+
+        ul {
+            display: flex;
+            column-gap: 1.6rem;
+        }
+
+        p {
+            color: #F1F1F1;
+            font-size: 1.6rem;
+            font-weight: $TitilliumWeb-Light;
+        }
+    }
+}

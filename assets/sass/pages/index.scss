@@ -1,0 +1,603 @@
+/* ===== BANNE SECTION STYLE ===== */
+
+.banner {
+    height: 100vh;
+    width: 100%;
+    @include cover-background;
+
+
+    &_content {
+        text-align: center;
+        padding-top: 14.9rem;
+
+
+        h1 {
+            font-size: 4.4rem;
+            line-height: 6.7rem;
+            font-weight: $TitilliumWeb-Regular;
+            color: $white;
+
+            @include media-breakpoint-down(md) {
+                font-size: 3.4rem;
+                line-height: 4.7rem;
+            }
+
+            span {
+                font-weight: $TitilliumWeb-Bold;
+            }
+        }
+
+        p {
+            max-width: 114.3rem;
+            margin: 0 auto;
+            margin-top: 1.5rem;
+            font-size: 1.9rem;
+            line-height: 2.9rem;
+            color: $white;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 9;
+            line-clamp: 9;
+            -webkit-box-orient: vertical;
+
+            @include media-breakpoint-down(sm) {
+                font-size: 1.6rem;
+            }
+        }
+
+    }
+}
+
+.img {
+    position: relative;
+    margin-top: -26rem;
+
+
+    @media (min-width:1400px) {
+        margin-top: -34rem;
+    }
+
+    @media (min-width:1600px) {
+        margin-top: -47rem;
+    }
+
+    @include media-breakpoint-down(sm) {
+        margin-top: -22rem;
+    }
+
+    img {
+        max-width: 83.53rem;
+        margin: 0 auto;
+        display: flex;
+
+        @media (min-width:1600px) {
+            max-width: 111.53rem;
+        }
+
+    }
+
+}
+
+/* ===== NEWS SECTION STYLE ===== */
+
+.news {
+    margin-top: 5rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    @include media-breakpoint-down(lg) {
+        padding: 0 .75rem;
+    }
+
+    h3 {
+        font-size: 22.1rem;
+        line-height: inherit;
+        font-weight: $TitilliumWeb-Bold;
+        color: #f3f8ffb3;
+        position: absolute;
+        top: 0px;
+        z-index: -1;
+    }
+
+    .parent {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 2.1rem;
+        grid-auto-rows: minmax(auto, max-content);
+
+        @include media-breakpoint-down(xl) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include media-breakpoint-down(sm) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        h2 {
+            font-weight: $TitilliumWeb-Bold;
+            font-size: 3.9rem;
+            line-height: 5.9rem;
+            color: #08243E;
+
+            @include media-breakpoint-down(sm) {
+                font-size: 2.9rem;
+                line-height: 2.9rem;
+            }
+        }
+
+
+        p {
+            font-weight: $TitilliumWeb-Light;
+            font-size: 1.8rem;
+            line-height: 2.9rem;
+            color: #08243E;
+            margin-top: 2rem;
+            text-align: justify;
+
+            @media (min-width:1600px) {
+                font-size: 2rem;
+                line-height: 3.8rem;
+                margin-top: 2.7rem;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+
+        .div1 {
+            grid-area: 1 / 1 / 9 / 5;
+        }
+
+        .div2 {
+            grid-area: 9 / 1 / 13 / 5;
+        }
+
+        .div3 {
+            grid-area: 1 / 5 / 13 / 9;
+        }
+
+        .div4 {
+            grid-area: 5 / 9 / 13 / 13;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+
+        .div2,
+        .div1 {
+            order: 2;
+        }
+    }
+
+}
+
+
+/* ===== TAB SECTION STYLE ===== */
+
+.tab {
+    background-image: url(../images/mask.png);
+    @include cover-background;
+    margin-top: 7.6rem;
+    padding: 13.5rem 0;
+
+
+    @media (min-width:1600px) {
+        padding-bottom: 19.5rem;
+    }
+
+    @include media-breakpoint-down(md) {
+        padding: 5rem 0;
+    }
+
+    &_head {
+        color: $white;
+
+        h2 {
+            font-weight: $TitilliumWeb-Bold;
+            font-size: 3.9rem;
+
+            @include media-breakpoint-down(sm) {
+                font-size: 2.9rem;
+            }
+        }
+
+        p {
+            margin-top: 1.9rem;
+            font-weight: $TitilliumWeb-Light;
+            font-size: 1.6rem;
+            line-height: 2.8rem;
+            max-width: 93.6rem;
+            width: 100%;
+
+            @media (min-width:1600px) {
+                line-height: 3.5rem;
+                font-size: 2rem;
+            }
+
+        }
+    }
+
+    &_wrapper {
+        display: flex;
+        margin-top: 6.7rem;
+        column-gap: 12.4rem;
+
+        @include media-breakpoint-down(xl) {
+            column-gap: 4rem;
+        }
+
+        @include media-breakpoint-down(md) {
+            flex-direction: column;
+            margin-top: 4rem;
+        }
+    }
+
+    &_links {
+
+        li {
+            color: #6D7B9B;
+            font-weight: $TitilliumWeb-Regular;
+            font-size: 1.8rem;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            align-items: center;
+            column-gap: 2rem;
+
+            @include media-breakpoint-down(sm) {
+                font-size: 1.6rem;
+            }
+
+            &::before {
+                content: "";
+                width: 2.5rem;
+                border-bottom: 1px solid #415683;
+                display: inline-block;
+                background: #FFFFFF;
+                vertical-align: middle;
+            }
+
+            @media (min-width:1600px) {
+                font-size: 2.2rem;
+                line-height: 3.4rem;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 4rem;
+
+                @include media-breakpoint-down(xl) {
+                    margin-bottom: 3rem;
+                }
+            }
+
+            &.active {
+                color: $white;
+
+                &::before {
+                    border-bottom: 1px solid #ffffff;
+                }
+            }
+        }
+    }
+
+    &_content {
+        flex: 1;
+        background-color: rgba(59, 123, 248, 0.1);
+        border-radius: 2rem;
+        padding: 6.7rem 11.3rem 6.3rem 6.3rem;
+        height: max-content;
+
+        @include media-breakpoint-down(xl) {
+            padding: 4rem;
+        }
+
+        @include media-breakpoint-down(md) {
+            margin-top: 3rem;
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding: 3rem;
+        }
+
+        h3 {
+            color: $white;
+            font-size: 3.5rem;
+            line-height: 4.8rem;
+            font-weight: $TitilliumWeb-Bold;
+
+            @include media-breakpoint-down(sm) {
+                font-size: 2.6rem;
+                line-height: 3.2rem;
+            }
+        }
+
+        p {
+            margin-top: 2.8rem;
+            font-size: 1.8rem;
+            line-height: 2.8rem;
+            color: $white;
+            font-weight: $TitilliumWeb-Light;
+
+            @media (min-width:1600px) {
+                font-size: 2rem;
+                line-height: 3.4rem;
+            }
+
+            @include media-breakpoint-down(sm) {
+                margin-top: 1.5rem;
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+}
+
+[data-tab-content] {
+    display: none;
+}
+
+.active[data-tab-content] {
+    display: block;
+}
+
+/* ===== SLIDER SECTION STYLE ===== */
+
+.slider {
+    margin-top: 19.8rem;
+    overflow: hidden;
+    position: relative;
+
+    @include media-breakpoint-down(xl) {
+        margin-top: 7.8rem;
+        padding-bottom: 10rem;
+    }
+
+    .swiper-button-prev-unique,
+    .swiper-button-next-unique {
+        border: 1px solid #3B7BF8;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        transition: .3s all ease;
+        @include flex-center;
+
+        img {
+            width: 2.5rem;
+            height: 2.5rem;
+            transition: .3s all ease;
+        }
+
+        &:hover {
+            background-color: #3B7BF8;
+            transition: .3s all ease;
+
+            img {
+                filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(259deg) brightness(109%) contrast(100%);
+            }
+        }
+    }
+
+    &_head {
+        display: flex;
+        justify-content: space-between;
+
+        h3 {
+            font-size: 22.1rem;
+            font-weight: $TitilliumWeb-Bold;
+            color: #f3f8ffb3;
+            position: absolute;
+            top: -94px;
+            z-index: -1;
+        }
+
+        h2 {
+            font-weight: $TitilliumWeb-Bold;
+            font-size: 3.9rem;
+            line-height: 5.9rem;
+
+            @include media-breakpoint-down(sm) {
+                font-size: 2.9rem;
+                line-height: 2.9rem;
+            }
+        }
+
+        p {
+            margin-top: 1.3rem;
+            font-weight: $TitilliumWeb-Light;
+            color: #08243E;
+            line-height: 2.5rem;
+            max-width: 122.7rem;
+            width: 100%;
+            font-size: 1.8rem;
+            line-height: 2.5rem;
+
+            @media (min-width:1600px) {
+                font-size: 2.2rem;
+                line-height: 3.5rem;
+            }
+
+            @include media-breakpoint-down(sm) {
+                font-size: 1.6rem;
+            }
+        }
+
+        &-right {
+            display: flex;
+            align-items: center;
+            column-gap: 1.5rem;
+
+
+            .quates {
+                width: 14.9rem;
+                margin-right: 1.5rem;
+
+                @include media-breakpoint-down(md) {
+                    position: absolute;
+                    right: 0;
+                    z-index: -1;
+                    opacity: 0.3;
+                }
+            }
+        }
+
+        &-navigation {
+            display: flex;
+            column-gap: 1.2rem;
+
+            @include media-breakpoint-down(md) {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 2;
+            }
+        }
+    }
+
+    &_slider {
+        margin-top: 4rem;
+
+        .swiper-slide {
+            border-radius: 1.7rem;
+            border: 1px solid #EDF6FF;
+            background-color: #F5F9FF;
+            padding: 7.5rem;
+
+            @include media-breakpoint-down(xl) {
+                padding: 4rem;
+            }
+
+            @include media-breakpoint-down(sm) {
+                padding: 4rem 2rem;
+            }
+        }
+
+        .swiper-slide-flex {
+            display: flex;
+            column-gap: 7.7rem;
+
+            @include media-breakpoint-down(xl) {
+                column-gap: 5rem;
+            }
+
+            @include media-breakpoint-down(md) {
+                flex-direction: column;
+            }
+
+        }
+
+        .swiper-slide-logo {
+            width: 6.7rem;
+            height: 6.7rem;
+            border-radius: 50%;
+            background-color: #3B7BF8;
+            @include flex-center;
+            color: $white;
+
+            @include media-breakpoint-down(md) {
+                display: none;
+            }
+        }
+
+        .swiper-slide-user {
+            width: 25.9rem;
+            height: 25.9rem;
+            border-radius: 50%;
+
+            @include media-breakpoint-down(xl) {
+                width: 16rem;
+                height: 16rem;
+            }
+
+            @include media-breakpoint-down(md) {
+                width: 9rem;
+                height: 9rem;
+            }
+        }
+
+        .swiper-slide-info {
+            display: flex;
+            column-gap: 1.4rem;
+
+            h5 {
+                color: #10415F;
+                font-size: 2.4rem;
+                font-weight: $TitilliumWeb-SemiBold;
+                line-height: 3.6rem;
+            }
+
+            span {
+                color: #10415F;
+                font-size: 1.2rem;
+                margin-top: 0.6rem;
+                opacity: 67%;
+                line-height: 1.8rem;
+
+            }
+        }
+
+        .swiper-slide-desc {
+            margin-top: 3.7rem;
+
+            @include media-breakpoint-down(sm) {
+                margin-top: 2rem;
+            }
+
+            p {
+                max-width: 107.3rem;
+                width: 100%;
+                font-size: 1.8rem;
+                line-height: 3.4rem;
+                color: #08243E;
+                font-weight: $TitilliumWeb-Regular;
+
+                @include media-breakpoint-down(sm) {
+                    font-size: 1.6rem;
+                    line-height: 2.8rem;
+                }
+
+
+            }
+        }
+
+        .swiper-slide-rating {
+            img {
+                @include media-breakpoint-down(md) {
+                    width: 10rem;
+                }
+            }
+        }
+
+        .swiper-pagination {
+            position: relative;
+            margin-top: 7.8rem;
+            left: auto !important;
+            transform: none !important;
+            text-align: left;
+
+            @include media-breakpoint-down(md) {
+                display: none;
+            }
+        }
+
+        .swiper-pagination-bullet {
+            width: 100px;
+            height: 4px;
+            border-radius: 4px;
+            background-color: #D8E5FF;
+            transition: .3s all ease;
+            opacity: 1;
+
+            &-active {
+                background-color: #3B7BF8;
+                transition: .3s all ease;
+            }
+
+        }
+
+        .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+            background-color: #3B7BF8;
+        }
+    }
+}
